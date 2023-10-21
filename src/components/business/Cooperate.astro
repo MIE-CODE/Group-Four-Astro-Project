@@ -11,12 +11,12 @@ import Card from "./Card.astro";
         <div>
             <p class="text-center red-hat text-[64px] not-italic leading-[normal] font-semibold">Our Palette of <span class="text-[#FF601F] red-hat text-[64px] not-italic font-semibold leading-[normal]">Corporate</span> Video Services</p>
         </div>
-        <div class="text-center font-[Noto_Sans] text-[16px] not-italic leading-[normal] w-1/2">
+        <div class="text-center font-[Noto_Sans] text-[16px] not-italic leading-[normal] w-1/2 ">
             <p>Unlocking the Power of Visual Storytelling for Your Business</p>
         </div>
     </div>
 
-    <div class="flex w-[80vw] flex-wrap justify-center items-center gap-[31px] m-auto pt-[30px]">
+    <div class="flex flex-col md:flex-row w-[80vw] justify-center items-center gap-[31px] m-auto pt-[30px]">
         <Card 
             cardImg={professional} 
             titleOne="Product" 
@@ -42,8 +42,8 @@ import Card from "./Card.astro";
             textColor2="text-[#FF601F]"
         />
     </div>
-    <div class="flex flex-col w-[702px] m-auto items-center gap-[32px]  pb-[40px] pt-[30px]">
-        <div class="text-[#344054] text-center noto text-[16px] not-italic font-normal leading-[160%]">
+    <div class="flex flex-col w-[80vw] m-auto items-center gap-[32px]  pb-[40px] pt-[30px]">
+        <div class="flex w-[100%] justify-center items-center text-[#344054] text-center noto text-[16px] not-italic font-normal leading-[160%]">
             <p>We believe that every video has a story to tell, and every story has a message that connects. Our corporate video services are not just about visuals; they're about creating a lasting impact on your branding and marketing goals.</p>
         </div>
         <button class="flex px-[20px] py-[12px] justify-center items-center gap-[12px] rounded-[8px] bg-[#FF601F] [box-shadow:0px_14px_16px_0px_rgba(29,_41,_57,_0.05)]">
