@@ -8,29 +8,40 @@ import cardimg from '../../public/Image.svg'
 
 const name = "individual";
 ---
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-	
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500&family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
-	</head>
-	<body class="min-h-scree">
+
 	
 	
  <div class="" > 
-     <LandingLayout  title='RESOURCE'  >
+     <LandingLayout  title='Resource'  >
 
+      <main class=" max-m-7xl ">
+
+      <section 
+      
+      class="w-auto py-10 sm:p-20">
+
+        
+
+    
+        <dev
+        style="background: linear-gradient(180deg, rgba(234, 236, 240, 0.00) 35.1%, #EAECF0 100%);"
+       id="hero" class=" mx-auto h-[28rem]  grid  place-content-center text-center md:py-[15rem] border border-solid border-white-300">
+            <h1 class="max-w-[52.5rem] font-bold text-3xl  md:text-6xl lead">Resource and<span class="text-[#FF601F]"> Insights</span></h1>
+            <p class="max-w-[32.5rem] mt-[24px] mb-12 mx-auto text-base">The latest industry news, technologies, and resources.</p>
+          <div class="flex justify-center py-2">
+            <div class="w-[70%]">
+            <Input type='text' label="" placeholder="search" /></div>
+        
+          </div>
+        </dev>
+        </section>
+        
+</main>
 
         <div class="text-[16px] font-['Noto_Sans'] lg:px-[161px] md:px-[40px] px-[14px] font-[400] ">
           <div class="flex justify-between md:flex-col gap-3 lg:flex-row items-center md:items-stretch overflow-scroll">        
                 <ul class="  flex gap-4 justify-between flex-nowrap py-6 ">
-            <li class="whitespace-nowrap">Video Editing Tips</li>
+            <li class="whitespace-nowrap text-[#FF601F] border-[#FF601F] border-b-2 pb-2">Video Editing Tips</li>
             <li class="whitespace-nowrap">Creative Storytelling</li>
             <li class="whitespace-nowrap">Industry Insights</li>
             <li class="whitespace-nowrap">Video    Marketing</li>
@@ -46,7 +57,7 @@ const name = "individual";
 
         <div>
             <h3 class=" relative font-[700] text-[24px] text-center mb-[42px] mt-[72px]">Featured</h3>
-            <div  class="grid grid-cols-1 md:grid-cols-2  gap-6
+            <div  class="grid grid-cols-1 md:grid-cols-2 place-items-center  gap-6
              lg:grid-cols-3  ">
             <div class="space-y-3 mb-[64px] max-w-[361px] 6px]">
                 <img src='/Image.svg' alt="" srcset=""/>
@@ -126,7 +137,7 @@ const name = "individual";
                          drive conversions, and elevate their brand presence.</p>
                 <button class="text-4  flex items-center justify-between p-3 gap-2 border-2 font-[700]  text-[#101828] border-[#101828]">VIEW RESOURCES  <img src='/veck.svg' alt="" srcset="" class="w-4 h-4"/></button>
             </div>
-            <img src="/pic1.svg" alt="" srcset="" class="lg:max-w-[396px] relative w-[500px] max-h-[352px] lg:max-h-[420px]"/>
+            <img src="/pic1.svg" alt="" srcset="" class="lg:max-w-[396px] relative  max-h-[352px] lg:max-h-[420px]"/>
         </div>
             
         <div class="flex items-center flex-col-reverse relative px-4 md:p-8 p-4  gap-8 lg:flex-row lg:gap-24 lg:pl-[84px]
@@ -150,7 +161,7 @@ const name = "individual";
 </div>
 
 <div class="tabs mt-[56px] md:mt-[50px] xl:mt-[64px]">
-    <h3 class="text-center text-[32px] my-6 font-[Red_Hat_Display] capitalize leading-[32px] md:text-[48px]">Let’s <span class="text-[#FF601F]">create</span> <br class="md:hidden"> 
+    <h3 class="text-center text-[32px] my-6 font-bold font-[Red_Hat_Display] uppercase  leading-[32px] md:text-[48px]">Let’s <span class="text-[#FF601F]">create</span> <br class="md:hidden"> 
         something special together.</h3>
         <h3 class="text-center my-6 text-sm text-[background: #344054]">In just 48 hours, our experts will meticulously assess your video content<br> and reveal untapped opportunities for enhancing your brand and visual storytelling.</h3>
     <div
