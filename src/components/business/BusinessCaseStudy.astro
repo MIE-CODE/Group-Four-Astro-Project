@@ -1,0 +1,46 @@
+---
+import CaseStudyCard from "./CaseStudyCard.astro";
+
+---
+
+<div class="flex w-full py-[96px] flex-col items-start gap-[48px] bg-[#F2F4F7]">
+    <div class="flex w-full flex-col items-center gap-[24px]">
+        <div>
+            <p class="text-[#101828] red-hat text-center text-[64px] not-italic font-semibold leading-[normal]">Case <span class="text-[#FF601F]">Studies</span></p>
+        </div>
+        <div>
+            <p class="text-[#344054] noto text-center text-[14px] not-italic font-normal leading-[160%]">Stories of transformation, engagement, and success.</p>
+        </div>
+    </div>
+    <div class="busCard ">
+        <CaseStudyCard />
+        <CaseStudyCard />
+        <CaseStudyCard />
+        <CaseStudyCard />
+        <CaseStudyCard />
+        <CaseStudyCard />
+    </div>
+    
+</div>
+
+<style>
+    .busCard{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    @media (max-width: 825px) {
+        .busCard {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    @media (max-width: 450px) {
+        .busCard{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+</style>
