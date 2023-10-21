@@ -5,6 +5,7 @@ import CardCaseStudy from "../components/CardCaseStudy.astro";
 import Layout from "../layouts/Layout.astro";
 import GetInTouchForm from "../components/GetInTouchForm.astro"
 import LandingLayout from "../layouts/LandingLayout.astro";
+import Faq from "../components/Faq";
 
 const vlogs = [
   "Vlog Editing",
@@ -199,11 +200,12 @@ const caseStudy = [
           </h1>
           <p class="sm:hidden text-[16px] leading-[25.6px] text-center mt-[24px]">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your brand and visual storytelling.</p>
         </div>
-        <h2 class="hidden sm:block text-[72px] leading-[95.26px] font-['Red_Hat_Display'] font-[700] px-[182px] text-center uppercase">
+        <h2 class="hidden lg:block text-[62px] pt-[70px] leading-[95.26px] font-['Red_Hat_Display'] font-[700] px-[182px] text-center uppercase">
           Let us know how we can help yOUR BUSINESS.
         </h2>
         <GetInTouchForm />
       </section>
+      <!-- <Faq client:load/> -->
     </section>
   </main>
 </LandingLayout>
