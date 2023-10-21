@@ -1,0 +1,51 @@
+---
+import CardFeatures from "../CardFeatures.astro";
+// import BrandingMarketing from "./Branding-Marketing.astro";
+// import DigitalMarketing from "./Digital-Marketing.astro";
+
+const vlogs = [
+  "Brand Identity Videos",
+  "Product and Service Promotion",
+  "Event Videos",
+  "Recruitment and HR Videos",
+  "Training and Educational Videos",
+  "And many more",
+];
+const contentsList = [
+  "Social Media Videos",
+  "Ad Campaign Videos",
+  "Content Marketing Videos",
+  "Email Marketing Videos",
+  "YouTube and Online Video Content",
+  "And many more",
+];
+
+---
+
+
+
+<div class="flex px-[160px] py-[96px] mb-[250px] flex-col items-start gap-[10px] bg-[#FCFCFD]">
+    <div class="flex w-full flex-col items-center gap-[56px]">
+        <div class="flex flex-col justify-center items-center gap-[24px] self-stretch">
+            <div class="text-[#FF601F] text-center noto text-[20px] not-italic font-bold leading-[160%] w-full">
+                <p>WHAT WE CAN DO FOR YOU</p>
+            </div>
+            <div class="text-[#101828] text-center red-hat text-[64px] not-italic font-semibold leading-[normal]">
+                <p>Custom Solutions for...</p>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row w-[80vw] gap-[32px]">
+            <CardFeatures
+            title="Personal Vlogs & Lifestyle"
+            array={vlogs}
+            footer="We’re here to help you. Reach out to us as soon as possible!"
+          />
+          <CardFeatures
+            title="Content & Personal Branding"
+            array={contentsList}
+            bg="#FF601F"
+            opacity={10}
+          />
+        </div>
+    </div>
+</div>
