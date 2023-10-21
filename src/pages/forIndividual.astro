@@ -1,0 +1,179 @@
+---
+import CardFeatures from "../components/CardFeatures.astro";
+import CardwithImage from "../components/CardwithImage.astro";
+import CardCaseStudy from "../components/CardCaseStudy.astro";
+import Layout from "../layouts/Layout.astro";
+
+const vlogs = [
+  "Vlog Editing",
+  "Traveling Vlogs",
+  "Day-in-the-life Videos",
+  "Celebration Highlights",
+  "Family Memories",
+  "And many more",
+];
+const contentsList = [
+  "Online Courses and Tutorials",
+  "Personal Branding Videos",
+  "YouTube Online Content",
+  "Video Resumes and Portfolios",
+  "And many more",
+];
+const caseStudy = [
+  {
+    title: "Wanderlust Chronicles",
+    description:
+      "The project garnered over 1 million views and sparked a 20% increase in travel bookings for our client",
+  },
+  {
+    title: "City Vibes Unveiled",
+    description:
+      "The series achieved a 30% increase in viewer engagement, with viewers expressing a strong connection to the featured cities.",
+  },
+  {
+    title: "A Lifetime in a Day",
+    description:
+      "The video left a lasting impression, with heartfelt reactions from viewers and 50,000 shares across social media platforms.",
+  },
+];
+---
+
+<Layout title="For Individual">
+  <main class="">
+    <section class="w-full flex flex-col">
+      <div
+        class="w-full bg-gradient-to-t from-[#EAECF0] to-[#EAECF0] rounded-[16px]"
+      >
+        <div class="flex flex-row">
+          <h1 class="text-[#101828] text-[32px] leading-[42.34px]">Featured</h1>
+          <h1 class="text-[#FF601F] text-[32px] leading-[42.32px]">Works</h1>
+        </div>
+        <p class="text-[16px] leading-[25.6px]">
+          We don't just edit videos; we choreograph stories that resonate,
+          inspire, and leave a lasting impression. Browse through our
+          award-winning work and find concepts that move you
+        </p>
+      </div>
+      <section class="bg-[#F2F4F7]">
+        <div class="mx-[12px] mt-[56px] flex flex-col">
+          <div class="flex flex-row justify-center">
+            <h1 class="text-[#FF601F] text-[32px] leading-[42.34px]">
+              Crafting
+            </h1>
+            <h1 class="text-[#101828] text-[32px] leading-[42.34px]">
+              Visual Stories that Inspire
+            </h1>
+          </div>
+          <p class="text-[16px] text-center leading-[21.9px] text-[#344054]">
+            Whether you're documenting your travels, sharing your daily
+            adventures, or building your personal brand, we're here to help.
+          </p>
+        </div>
+        <CardwithImage
+          title1="Professional"
+          title2="Quality"
+          image="/images/lady-on-pc.png"
+          description="You can achieve professional-level video content that rivals that of larger productions, ensuring a high-quality end product."
+        />
+        <CardwithImage
+          title1="Improved "
+          title2="Engagement"
+          image="/images/chart.png"
+          description="Professional videos tend to engage and captivate audiences more effectively, helping you connect with your viewers."
+        />
+        <CardwithImage
+          title1="Personal"
+          title2="Branding"
+          image="/images/bulb.png"
+          description="Benefit from your our support in creating videos that enhance personal brand, helping you stand out in the digital landscape."
+        />
+        <div class="w-full flex flex-col items-center px-[25.46px] mt-[32px]">
+          <p class="text-[#344054] text-[16px] leading-[25.6x] text-center">
+            With tifi.tv, your creative vision transforms into captivating
+            visual stories.
+          </p>
+          <button
+            class="w-fit mt-[44px] mb-[64px] bg-[#FF601F] py-[12px] px-[20px] rounded-[8px] flex space-x-1"
+          >
+            <span class="text-[16px] leading-[24px] text-white">LET’S TALK</span
+            >
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 19 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 2.28931L3 16.2893M17 2.28931V15.4658M17 2.28931H3.82353"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="square"
+                stroke-linejoin="bevel"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="w-full bg-[#FCFCFD]">
+        <div class="mt-[64px] px-[16px]">
+          <div class="flex flex-col gap-y-[16px]">
+            <h3 class="text-[#FF601F] text-[16px] leading-[25.6px] text-center">
+              WHO WE HELP
+            </h3>
+            <h1
+              class="text-[32px] leading-[42.34px] text-center text-[#101828]"
+            >
+              Custom Solutions for...
+            </h1>
+          </div>
+          <CardFeatures
+            title="Personal Vlogs & Lifestyle"
+            array={vlogs}
+            footer="We’re here to help you. Reach out to us as soon as possible!"
+          />
+          <CardFeatures
+            title="Content & Personal Branding"
+            array={vlogs}
+            bg="#FF601F"
+            opacity={10}
+          />
+        </div>
+      </section>
+      <section class="mt-[64px] bg-[#F2F4F7] flex flex-col px-[16px] pt-[64px]">
+        <div>
+          <h1 class="text-center text-[#101828] text-[32px] leading-[42.34px]">
+            Case
+            <span class="text-[#FF601F]">Studies</span>
+          </h1>
+          <p
+            class="mt-[24px] text-[16px] leading-[25.6px] text-center text-[#344054]"
+          >
+            Explore some of our standout projects, each representing a unique
+            facet of our video editing and storytelling expertise. These
+            projects transcend mere videos; they're captivating narratives that
+            inspire and make an impact.
+          </p>
+        </div>
+        <div class="flex flex-col">
+          {
+            caseStudy.map((cases) => (
+              <CardCaseStudy
+                title={cases.title}
+                description={cases.description}
+              />
+            ))
+          }
+        </div>
+      </section>
+      <section class="bg-white flex flex-col ">
+        <div class="mx-[16px]">
+          <h1 class="flex text-[32px] leading-[42.34px] text-center">
+            Let's<span class="px-">Create</span><span class="-ml-4">something special together.</span>
+
+          </h1>
+          <p class="text-[16px] leading-[25.6px] text-center mt-[24px]">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your brand and visual storytelling.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+</Layout>
