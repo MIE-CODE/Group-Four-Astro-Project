@@ -5,6 +5,7 @@ import TextArea from '../components/TextArea.astro';
 import PrimaryButton from '../components/PrimaryButton.astro';
 import cardimg from '../../public/Image.svg'
 
+
 const name = "individual";
 ---
 <!doctype html>
@@ -19,35 +20,42 @@ const name = "individual";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500&family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
 	</head>
-	<body class="min-h-screen">
+	<body class="min-h-scree">
 	
 	
  <div class="" > 
      <LandingLayout  title='RESOURCE'  >
 
 
-        <div class="text-[16px] px-[161px] font-[400]">
-            <ul class="  flex justify-between p-8">
-            <li>Video Editing Tips</li>
-            <li>Creative Storytelling</li>
-            <li>Industry Insights</li>
-            <li>Video Marketing</li>
-        </ul>
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
+        <div class="text-[16px] font-['Noto_Sans'] lg:px-[161px] md:px-[40px] px-[14px] font-[400] ">
+          <div class="flex justify-between md:flex-col gap-3 lg:flex-row items-center md:items-stretch overflow-scroll">        
+                <ul class="  flex gap-4 justify-between flex-nowrap py-6 ">
+            <li class="whitespace-nowrap">Video Editing Tips</li>
+            <li class="whitespace-nowrap">Creative Storytelling</li>
+            <li class="whitespace-nowrap">Industry Insights</li>
+            <li class="whitespace-nowrap">Video    Marketing</li>
+                </ul>
+              <ul class=" flex gap-4 justify-between items-center ">
+                <li class="whitespace-nowrap min-w-[150px] lg:min-w-[150px] items-center md:w-full text-start px-2 border-[1px] flex justify-between border-black">Videos <img src="/dwn.svg" alt="" srcset="" class="lg:w-10 lg:h-10"/></li>
+                <li class="whitespace-nowrap min-w-[150px]  lg:min-w-[150px] items-center md:w-full text-start px-2 border-[1px] flex justify-between border-black">Newest First <img src="/dwn.svg" alt="" srcset="" class="lg:w-10 lg:h-10"/> </li>
+                              
+              </ul>
+                
+      </div>
 
-        <div  >
+
+        <div>
             <h3 class=" relative font-[700] text-[24px] text-center mb-[42px] mt-[72px]">Featured</h3>
-            <div  class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3  ">
-            <div class="space-y-3 mb-[64px] max-w-[376px]">
+            <div  class="grid grid-cols-1 md:grid-cols-2  gap-6
+             lg:grid-cols-3  ">
+            <div class="space-y-3 mb-[64px] max-w-[361px] 6px]">
                 <img src='/Image.svg' alt="" srcset=""/>
                 <p class="font-[700] text-14 text-[#FF601F]">Video Editing</p>
-                <p class="flex justify-between items-center">Time lapse and Mapping <img src="/veck.svg" alt="" srcset="" class="w-[14px] h-[14px]"/></p>
+                <p class="flex justify-between items-center">Time lapse and Mapping 
+                    <img src="/veck.svg" alt="" srcset="" class="w-[14px] h-[14px]"/></p>
                 <p class="text-4 text-[#667085] leading-6">We harness cutting-edge technology to capture the dynamic evolution of landscapes, cityscapes, and more.</p>
             </div>
-            <div class="space-y-3 mb-[64px] max-w-[376px]">
+            <div class="space-y-3 mb-[64px] max-w-[361px]">
                 <img src='/Image.svg' alt="" srcset=""/>
                 <p class="font-[700] text-14 text-[#FF601F]">Video Editing</p>
                 <p class="flex justify-between items-center">Time lapse and Mapping <img src="/veck.svg" alt="" srcset="" class="w-[14px] h-[14px]"/></p>
@@ -81,11 +89,11 @@ const name = "individual";
       </div>
         </div>
         <div class="flex items-center justify-between mt-[64px] ">
-            <div>
+            <div class="hidden md:block" >
                 <p class="text-[#101828] flex items-center gap-2 space-x-2 text-sm font-normal"> 
                     <img src="/arrow-left.svg" alt="" srcset="" class="w-4 h-4" />Previous </p>
             </div>
-            <ul class="flex text-sm text-[#667085] font-[500]">
+            <ul class="md:flex text-sm hidden text-[#667085] font-[500]">
                 <li class="p-[12px]">1</li>
                 <li class="p-[12px]">3</li>
                 <li class="p-[12px]">4</li>
@@ -95,7 +103,7 @@ const name = "individual";
                 <li class="p-[12px]">8</li>
                 <li class="p-[12px]">10</li>
             </ul>
-            <div>
+            <div class="hidden md:block">
                 <p  class="text-[#101828] flex items-center gap-2 space-x-2 text-sm font-normal"> 
                     Next<img src="/arrow-right.svg" alt="" srcset="" class="w-4 h-4" /></p>
             </div>
@@ -104,9 +112,11 @@ const name = "individual";
     </div>
  
 
-        <div class="py-[107px] bg-[#F2F4F7]  px-[161px] mx-start">
-            <div class="flex items-center gap-24 pl-[84px] my-12 pr-1 bg-white  justify-between">
-            <div class='max-w-[532px] my-auto space-y-8 m-[]'>
+        <div class="py-[107px] lg:bg-[#F2F4F7]   lg:px-[161px] relative md:px-[40px] px-[14px] ">
+            <div class="flex items-center flex-col-reverse relative p-4 md:p-8  gap-8 lg:flex-row lg:gap-24 lg:pl-[84px]
+             my-12 lg:pr-1 bg-white 
+              justify-between">
+            <div class=' my-auto space-y-8  '>
                 <h2 class="text-9 text-[#101828] font-[700] ">Businesses and Brands</h2>
                 <p class="font-normal text-[16px] text-[#1D2939] leading-6">From marketing strategies to the latest industry
                      insights, our resources are designed to be your
@@ -116,26 +126,118 @@ const name = "individual";
                          drive conversions, and elevate their brand presence.</p>
                 <button class="text-4  flex items-center justify-between p-3 gap-2 border-2 font-[700]  text-[#101828] border-[#101828]">VIEW RESOURCES  <img src='/veck.svg' alt="" srcset="" class="w-4 h-4"/></button>
             </div>
-            <img src="/pic1.svg" alt="" srcset="" class="w-[396px] h-[420px]"/>
+            <img src="/pic1.svg" alt="" srcset="" class="lg:max-w-[396px] relative w-[500px] max-h-[352px] lg:max-h-[420px]"/>
         </div>
-            <div>
-                <div class="flex items-center gap-24 pl-[84px] my-[] pr-1 bg-[#F4E2DD]  justify-between">
-                    <div class='max-w-[532px] my-auto space-y-8 m-[]'>
-                        <h2 class="text-9 text-[#101828] font-[700] ">Individuals</h2>
-                        <p class="font-normal text-[16px] leading-6 text-[#1D2939]">From marketing
-                             strategies to the latest industry insights, our resources are 
-                             designed to be your guiding light in the world of visual storytelling.
-                              We're dedicated to helping businesses harness the true potential of video content to connect with their audience, 
-                            drive conversions, and elevate their brand presence.</p>
-                            <button class="text-4  flex items-center justify-between p-3 gap-2 border-2 font-[700]  text-[#101828] border-[#101828]">VIEW RESOURCES  <img src='/veck.svg' alt="" srcset="" class="w-4 h-4"/></button>
-                        </div>
-                    <img src="/pic2.svg" alt="" srcset="" class="w-[396px] h-[420px]"/>
-                </div>
-                   
-        </div>
+            
+        <div class="flex items-center flex-col-reverse relative px-4 md:p-8 p-4  gap-8 lg:flex-row lg:gap-24 lg:pl-[84px]
+        my-12 lg:pr-1 bg-[#F4E2DD]
+         justify-between">
+       <div class=' my-auto space-y-8  '>
+           <h2 class="text-9 text-[#101828] font-[700] ">Businesses and Brands</h2>
+           <p class="font-normal text-[16px] text-[#1D2939] leading-6">From marketing strategies to the latest industry
+                insights, our resources are designed to be your
+                 guiding light in the world of visual storytelling.
+                  We're dedicated to helping businesses harness the true
+                   potential of video content to connect with their audience,
+                    drive conversions, and elevate their brand presence.</p>
+           <button class="text-4  flex items-center justify-between p-3 gap-2 border-2 font-[700]  text-[#101828] border-[#101828]">VIEW RESOURCES  <img src='/veck.svg' alt="" srcset="" class="w-4 h-4"/></button>
+       </div>
+       <img src="/pic2.svg" alt="" srcset="" class="lg:max-w-[396px] relative w-[500px] max-h-[352px] lg:max-h-[420px]"/>
+   </div>
+               
         
 
 </div>
+
+<div class="tabs mt-[56px] md:mt-[50px] xl:mt-[64px]">
+    <h3 class="text-center text-[32px] my-6 font-[Red_Hat_Display] capitalize leading-[32px] md:text-[48px]">Let’s <span class="text-[#FF601F]">create</span> <br class="md:hidden"> 
+        something special together.</h3>
+        <h3 class="text-center my-6 text-sm text-[background: #344054]">In just 48 hours, our experts will meticulously assess your video content<br> and reveal untapped opportunities for enhancing your brand and visual storytelling.</h3>
+    <div
+      class="flex justify-center gap-[40px] border-b-[1px] border-solid border-b-[#D0D5DD]"
+    >
+      <button
+        data-tab-control="business"
+        data-tab-current
+        class="font-['Noto_Sans'] font-[700] text-[16px] leading-[21.79px] text-[#FF601F] pb-[16px] border-b-[4px] border-solid border-b-[#FF601F]"
+        >Business</button
+      >
+      <button
+        data-tab-control="individual"
+        class="font-['Noto_Sans'] font-[400] text-[16px] leading-[21.79px] text-[#344054] pb-[16px]"
+        >Individual</button
+      >
+    </div>
+
+     <div>
+      <div data-tab-business>
+        <form action="" class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]">
+          <Input type='text' label="Company Name" placeholder="Enter business name" />
+  
+          <Input type='email' label="Business Email Address" placeholder="Enter email address" />
+  
+          <Input type='email' label="Subject(Optional)" placeholder="Enter subject" />
+  
+          <TextArea label='Tell us what you need.' placeholder='Type your message' />
+  
+          <PrimaryButton type="submit">Send Message</PrimaryButton>
+        </form>
+      </div>
+
+      <div class="hidden" {...{[`data-tab-${name}`]:''}}>
+        <form action="" class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]">
+          <Input type='text' label="Full Name" placeholder="Enter full name" />
+
+          <Input type='email' label="Email Address" placeholder="Enter email address" />
+
+          <Input type='text' label="Subject(Optional)" placeholder="Enter subject" />
+
+          <TextArea label='Tell us what you need.' placeholder='Type your message' />
+
+          <PrimaryButton type="submit">Send Message</PrimaryButton>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const tabs = document.querySelectorAll(".tabs");
+
+  tabs.forEach((tab) => {
+    const currentClassList = tab
+      .querySelector("[data-tab-current]")
+      ?.classList?.toString();
+    const clickables = tab.querySelectorAll("[data-tab-control]");
+
+    clickables.forEach((clickable) => {
+      clickable.addEventListener("click", (event: any) => {
+        if (event.target.classList.toString() !== currentClassList) {
+          const inactiveClassList = event.target.classList;
+          const toHide = tab
+            .querySelector("[data-tab-current]")
+            ?.getAttribute("data-tab-control");
+          const toShow = event.target.getAttribute("data-tab-control");
+          const el = tab.querySelector(`[data-tab-${toHide}]`);
+
+          tab
+            .querySelector("[data-tab-current]")
+            ?.setAttribute("class", inactiveClassList.toString());
+          tab
+            .querySelector("[data-tab-current]")
+            ?.removeAttribute("data-tab-current");
+          event.target.setAttribute("class", currentClassList);
+          event.target.setAttribute("data-tab-current", "");
+
+          tab
+            .querySelector(`[data-tab-${toShow}]`)
+            ?.setAttribute("class", el?.classList?.toString() as string);
+          el?.setAttribute("class", "hidden");
+        }
+      });
+    });
+  });
+</script>
+
 
 
 </LandingLayout>
