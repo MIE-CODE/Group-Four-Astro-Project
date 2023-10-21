@@ -1,0 +1,37 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import Input from '../../components/Input.astro';
+import TextArea from '../../components/TextArea.astro';
+import PrimaryButton from '../../components/PrimaryButton.astro';
+---
+
+
+
+<LandingLayout title="Get In Touch">
+  <div class="px-[16px] mt-[64px] md:mt-[106px] xl:mt-[98px] grid gap-[24px]">
+    <p class="uppercase font-['Red_Hat_Display'] font-[700] text-[32px] text-center leading-[42.34px] md:text-[48px] md:leading-[63.5px] xl:text-[72px] xl:leading-[95.26px]">GET IN TOUCH</p>
+  
+    <p class="font-['Noto_Sans'] font-[400] text-[16px] leading-[25.6px] text-center max-w-[643px] mx-auto xl:max-w-[862px]">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your <span class="font-[700]">brand</span> and visual storytelling.</p>
+  </div>
+
+  <div class="mt-[56px] md:mt-[50px] xl:mt-[64px]">
+    <div class="flex justify-center gap-[40px] border-b-[1px] border-solid border-b-[#D0D5DD]">
+      <button class="font-['Noto_Sans'] font-[700] text-[16px] leading-[21.79px] text-[#FF601F] pb-[16px] border-b-[4px] border-solid border-b-[#FF601F]">Business</button>
+      <button class="font-['Noto_Sans'] font-[400] text-[16px] leading-[21.79px] text-[#344054] pb-[16px]">Individual</button>
+    </div>
+
+    <div>
+      <form action="" class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]">
+        <Input label="Company Name" placeholder="Enter business name" />
+
+        <Input label="Business Email Address" placeholder="Enter email address" />
+
+        <Input label="Subject(Optional)" placeholder="Enter subject" />
+
+        <TextArea label='Tell us what you need.' placeholder='Type your message' />
+
+        <PrimaryButton type="submit">Send Message</PrimaryButton>
+      </form>
+    </div>
+  </div>
+</LandingLayout>
