@@ -1,0 +1,27 @@
+---
+import TopCard from "../components/TopCard.astro";
+import Cooperate from "../components/business/Cooperate.astro";
+import Impact from "../components/business/Impact.astro";
+import Solutions from "../components/business/Solutions.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="For Individuals">
+   <TopCard/>
+   <Cooperate />
+   <Solutions />
+   <Impact />
+</Layout>
+
+<style is:global>
+   .noto {
+      font-family: 'Noto Sans', sans-serif;;
+   }
+   .red-hat {
+      font-family: 'Red Hat Display', sans-serif;
+   }
+   .inter {
+      font-family: 'Inter', sans-serif;
+   }
+</style>
