@@ -7,4 +7,4 @@ interface Props {
 const {hasDrop, href} = Astro.props;
 ---
 
-<a href={href} class="flex gap-[4px] items-center font-[500] font-['Noto_Sans'] text-[16px] leading-[24px]"><slot /> {hasDrop && <span><img src="/images/arrow-down.svg" /></span>}</a>
+<a href={href} class="flex gap-[4px] items-center hover:text-gray-400 font-[500] font-['Noto_Sans'] text-[16px] leading-[24px]"><slot /> {hasDrop && <span><img src="/images/arrow-down.svg" /></span>}</a>
