@@ -4,13 +4,14 @@ import Label from './Label.astro';
 interface Props {
   label: string;
   placeholder: string;
+  type: astroHTML.JSX.HTMLInputTypeAttribute;
 }
 
-const {label, placeholder} = Astro.props;
+const {label, placeholder, type} = Astro.props;
 ---
 
 <div class="grid gap-[6px]">
   <Label>{label}</Label>
 
-  <input type="text" class="rounded-[8px] border-solid border-[1px] border-[#D0D5DD] py-[16px] px-[14px] font-['Plus_Jakarta_Sans'] font-[400] text-[16px] leading-[24px] outline-none" placeholder={placeholder} />
+  <input class="rounded-[8px] border-solid border-[1px] border-[#D0D5DD] py-[16px] px-[14px] font-['Plus_Jakarta_Sans'] font-[400] text-[16px] leading-[24px] outline-none"  type={type}  placeholder={placeholder} />
 </div>

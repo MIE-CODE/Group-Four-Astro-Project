@@ -1,0 +1,106 @@
+---
+const { headerTitle } = Astro.props;
+const { headerPr } = Astro.props;
+const { secondTitle } = Astro.props;
+---
+
+    <div class="container mx-auto px-4">
+        <div class="showcase-text text-center">
+      <h1 class="text-4xl font-bold mb-4">{headerTitle} <span>{secondTitle}</span></h1>
+      <p class="text-lg">{headerPr}</p>
+    </div>
+  </div>
+
+<!-- <style>
+  .headertext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 440px;
+    border-radius: 16px;
+    box-sizing: border-box;
+
+  }
+  .headertext .container {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    display: flex;
+    gap: 24px;
+    box-sizing: border-box;
+    border-color: #ff601f;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+  .headertext .container .inner_container {
+    width: 65%;
+  }
+  .headertext .container h1 {
+    justify-content: center;
+    display: flex;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 95.26px;
+  }
+
+  .headertext .container p {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+  }
+  .headertext h1 {
+    color: #ff601f;
+  }
+  .headertext h1 span {
+    color: #101828;
+  }
+    /* transform-origin: top center;
+
+  } */
+</style>
+
+---
+export interface Props {
+  heading?: string;
+  text?: string;
+  showBtn?: boolean;
+  showImage?: boolean;
+  showInput?: boolean;
+}
+
+const { heading = "Welcome To The Astro Crash Course!", text = "Build super fast HTML-first websites using your favorite JavaScript frameworks", showBtn = false, showImage = false, showInput = false } = Astro.props as Props;
+---
+<section class="py-10 md:py-35 lg:py-40 px-0 md:px-10 lg:px-20 bg-gradient-to-b from-white to-gray-200 border-b-4 border-l-4 border-white rounded-lg lg:max-w-[78%] mx-auto">
+  <div class="container mx-auto px-4">
+    <div class="showcase-text text-center">
+      <h1 class="text-4xl font-bold mb-4">
+        {heading.split(' ').map((word, index) => (
+          <span
+            class={`${
+              word.toLowerCase().includes('featured') ||
+              word.toLowerCase().includes('beyond') ||
+              word.toLowerCase().includes('individuals') ||
+              word.toLowerCase().includes('business') ||
+              word.toLowerCase().includes('insights')
+                ? 'text-[#ff601f]'
+                : ''
+            }`}
+            key={index}
+          >
+            {word} {index !== heading.split(' ').length - 1 ? ' ' : ''}
+          </span>
+        ))}
+      </h1>
+      <p class="text-lg">{text}</p>
+      {showInput && (
+        <input
+          type="text"
+          class="mt-4 p-2 w-full rounded border border-gray-300 focus:ring focus:ring-indigo-300"
+          placeholder="Enter something"
+        />
+      )}
+    </div>
+  </div>
+</section> -->

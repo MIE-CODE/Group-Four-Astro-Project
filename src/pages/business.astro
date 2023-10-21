@@ -1,4 +1,6 @@
 ---
+import Faq from "../components/Faq";
+import GetInTouchForm from "../components/GetInTouchForm.astro";
 import TopCard from "../components/TopCard.astro";
 import BusinessCaseStudy from "../components/business/BusinessCaseStudy.astro";
 import Cooperate from "../components/business/Cooperate.astro";
@@ -16,11 +18,13 @@ import LandingLayout from "../layouts/LandingLayout.astro";
    <Impact />
    <BusinessCaseStudy />
    <Elivate />
+   <GetInTouchForm />
+   <!-- <Faq client:load /> -->
 </LandingLayout>
 
 <style is:global>
    .noto {
-      font-family: 'Noto Sans', sans-serif;;
+      font-family: 'Noto Sans', sans-serif;
    }
    .red-hat {
       font-family: 'Red Hat Display', sans-serif;

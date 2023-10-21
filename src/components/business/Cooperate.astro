@@ -1,8 +1,8 @@
 ---
-import professional from "../../assets/productDemo.jpg"
-import improved from "../../assets/camVideos.jpg"
-import bulb from "../../assets/hands.jpg"
-import Card from "./Card.astro";
+// import professional from "../../assets/productDemo.jpg"
+// import improved from "../../assets/camVideos.jpg"
+// import bulb from "../../assets/hands.jpg"
+import CardwithImage from "../CardwithImage.astro";
 
 ---
 
@@ -17,30 +17,24 @@ import Card from "./Card.astro";
     </div>
 
     <div class="flex flex-col md:flex-row w-[80vw] justify-center items-center gap-[31px] m-auto pt-[30px]">
-        <Card 
-            cardImg={professional} 
-            titleOne="Product" 
-            titleTwo="Demonstrations" 
-            words="Present your products in their best light with dynamic and engaging demonstrations that showcase their features and benefits."
-            textColor1="text-[#FF601F]"
-            textColor2="text-[#000]"
+        <CardwithImage 
+            image="/images/productDemo.jpg"
+            title1="Product"
+            title2="Demonstrations"
+            description="Present your products in their best light with dynamic and engaging demonstrations that showcase their features and benefits." 
         />
-        <Card 
-            cardImg={improved} 
-            titleOne="Promotional" 
-            titleTwo="Videos" 
-            words="Craft compelling promotional videos that captivate your audience, drive conversions, and enhance brand visibility."
-            textColor1="text-[#000]"
-            textColor2="text-[#FF601F]"
+        <CardwithImage 
+            image="/images/camVideos.jpg"
+            title1="Promotional" 
+            title2="Videos"
+            description="Craft compelling promotional videos that captivate your audience, drive conversions, and enhance brand visibility."
         />
-        <Card 
-            cardImg={bulb} 
-            titleOne="Internal" 
-            titleTwo="Communications" 
-            words="Foster strong internal connections through effective video communication, making sure your message resonates with your team."
-            textColor1="text-[#000]"
-            textColor2="text-[#FF601F]"
-        />
+        <CardwithImage 
+            image="/images/hands.jpg"
+            title1="Internal" 
+            title2="Communications" 
+            description="Foster strong internal connections through effective video communication, making sure your message resonates with your team."
+            />
     </div>
     <div class="flex flex-col w-[80vw] m-auto items-center gap-[32px]  pb-[40px] pt-[30px]">
         <div class="flex w-[100%] justify-center items-center text-[#344054] text-center noto text-[16px] not-italic font-normal leading-[160%]">

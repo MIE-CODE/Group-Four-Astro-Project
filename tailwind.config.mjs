@@ -10,6 +10,9 @@ export default {
         xl: "1280px", // Extra-large screens, e.g., desktops
         "2xl": "1536px", // Extra-extra-large screens, e.g., large desktops
       },
+      fontFamily: {
+        "red-hat": ["Red Hat Display", "sans"],
+      },
     },
   },
   plugins: [],

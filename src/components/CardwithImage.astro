@@ -1,0 +1,28 @@
+---
+interface Props {
+	title1?: string;
+	title2?: string;
+	description?:string;
+	image?:string;
+}
+
+const { title1, title2, description, image ="/images/band.jpg" } = Astro.props;
+---
+
+<main>
+    <div class="mt-[32px] pb-[24px] mx-[15.5px] bg-white">
+          <img src={image} alt="" class="" />
+          <div class="w-full flex flex-col mt-[32px]">
+            <h1
+              class="w-full flex flex-row justify-center text-[18px] leadind-[28.8px] space-x-1"
+            >
+              <span class="text-[#FF601F]">{title1}</span>
+              <span class="text-[#101828]"> {title2}</span>
+            </h1>
+            <p class="text-[16px] leading-[25.6px] text-center text-[
+#1D2939] mx-[16px]">
+              {description}
+            </p>
+          </div>
+        </div>
+</main>
