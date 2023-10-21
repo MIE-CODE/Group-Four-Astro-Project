@@ -1,0 +1,27 @@
+---
+import NavItem from "./NavItem.astro";
+import PrimaryButton from "../PrimaryButton.astro";
+---
+
+<header class="w-[100%] py-[28px] px-[40px] shadow-[0px_2px_4px_0px_#1018280F] flex justify-between max-w-[1188px] xl:py-[24px] xl:pl-[24px] xl:pr-[32.5px] ml-auto mr-auto mt-[32px] rounded xl:rounded-[24px]">
+  <a href="/">
+    <img src="/images/Tifi.svg" />
+  </a>
+
+  <nav class="hidden xl:flex gap-[32px]">
+    <NavItem  href="#about">About Us</NavItem>
+    <NavItem href="#portfolio">Portfolio</NavItem>
+    <NavItem href="#clients" hasDrop>Clients</NavItem>
+    <NavItem href="#resources">Resources</NavItem>
+  </nav>
+
+  <button class="p-[8px] xl:hidden">
+    <img  src="/images/Hamburger_Icon.svg" />
+  </button>
+
+  <div class="hidden xl:block">
+    <PrimaryButton href="#lets-talk" component="a">
+      Let's talk
+    </PrimaryButton>
+  </div>
+</header>
