@@ -1,32 +1,33 @@
 ---
 import video from "/public/images/video.png";
+import Dropdown from "../components/DropDown.astro";
 
-const VideoData = [
-    {
-       video: video,
-        text: "A Day in the life of a Software Developer",
-    },
-    {
-        video: video,
-        text: "A Day in the life of a Software Developer",
-    },
-    {
-        video: video,
-        text: "A Day in the life of a Software Developer",
-    },
-    {
-        video: video,
-        text: "A Day in the life of a Software Developer",
-    },
-    {
-        video: video,
-        text: "A Day in the life of a Software Developer",
-    },
-    {
-        video: video,
-        text: "A Day in the life of a Software Developer",
-    },
-];
+// const VideoData = [
+//     {
+//        video: video,
+//         text: "A Day in the life of a Software Developer",
+//     },
+//     {
+//         video: video,
+//         text: "A Day in the life of a Software Developer",
+//     },
+//     {
+//         video: video,
+//         text: "A Day in the life of a Software Developer",
+//     },
+//     {
+//         video: video,
+//         text: "A Day in the life of a Software Developer",
+//     },
+//     {
+//         video: video,
+//         text: "A Day in the life of a Software Developer",
+//     },
+//     {
+//         video: video,
+//         text: "A Day in the life of a Software Developer",
+//     },
+// ];
 ---
 
 <style>
@@ -85,16 +86,18 @@ const VideoData = [
         }
 </style>
 
-<div class='py-20 my-20 bg-gray-200'>
-<h2 class="w-full text: 3xl md:text-4xl text-center mb-4 px-10">Carefully Picked Videos</h2>
+<div class='py-20 my-10 bg-gray-200'>
+<h2 class="w-full text: 3xl md:text-[64px] text-center mb-4 px-10 ">Carefully Picked Videos</h2>
 <div class="row justify-content-center mb-5" style="border-bottom: 1px solid var(--gray-500, #D0D5DD);">
     <div class="tabs mt-[56px] md:mt-[50px] xl:mt-[64px]">
         <div class="flex justify-center gap-[40px] border-b-[1px] border-solid border-b-[#D0D5DD]">
           <button data-tab-control="business" data-tab-current class="font-['Noto_Sans'] font-[700] text-[16px] leading-[21.79px] text-[#FF601F] pb-[16px] border-b-[4px] border-solid border-b-[#FF601F]">Business</button>
           <button data-tab-control="individual" class="font-['Noto_Sans'] font-[400] text-[16px] leading-[21.79px] text-[#344054] pb-[16px]">Individual</button>
+          <Dropdown />
         </div>
+          
 </div>
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6 lg:max-w-[80%] mx-auto">
+<!-- <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6 lg:max-w-[80%] mx-auto">
   {VideoData.map((item, index) => (
     <div key={index} class="relative group">
       <video width="100%" height="auto" controls class="brightness-0 group-hover:brightness-100  transition-all duration-300 rounded video_container"> 
@@ -108,7 +111,7 @@ const VideoData = [
       </div>
     </div>
   ))}
-</section>
+</section> -->
 
 
 </div>

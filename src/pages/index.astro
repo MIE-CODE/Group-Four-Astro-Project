@@ -1,14 +1,169 @@
 ---
-import Header from '../components/Header/Header.astro';
-import Header from '../components/Header/Header.astro';
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Main from '../components/Main.astro'
-import PrimaryButton from '../components/PrimaryButton.astro';
-import Footer from '../components/Footer/Footer.astro';
+import "@fontsource-variable/red-hat-display";
+import LandingLayout from "../layouts/LandingLayout.astro";
+import HeaderText from "../components/HeaderText/HeaderText.astro";
+import NavItem from "../components/Header/NavItem.astro";
+import Input from "../components/Input.astro";
+import TextArea from "../components/TextArea.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
+import FaqCard from "../components/FaqCard.astro";
+import VideoData from "../components/VideoData.astro";
+import Dropdown from "../components/DropDown.astro";
+import CarefullyPicked from "../components/CarefullyPicked";
+import Vector  from "../components/Vector"
+
+const name = "individual";
 ---
-<Layout title="Home">
-	<Header />
-	<Main />
-		
-<Footer/>
+
+<LandingLayout title="Featured Works">
+  <section
+    class="py-10 md:py-35 lg:py-40 px-0 md:px-10 lg:px-20 bg-gradient-to-b from-white to-gray-200 border-b-4 border-l-4 border-white rounded-lg lg:max-w-[1300px] mx-auto"
+  >
+    <HeaderText
+      headerTitle="Featured"
+      secondTitle=" Works"
+      headerPr="We don't just edit videos; we choreograph stories that resonate, inspire, and leave a lasting impression. Browse through our award-winning work and find concepts that move you"
+    />
+  </section>
+  <div>
+    <CarefullyPicked client:load />
+
+  </div>
+<section>
+  <Vector display={"top-0 left-0"} />
+  <div class=" flex justify-center">
+    <div>
+      <div class=" py-10 md:py-35 lg:pt-40 lg:pb-10 px-0 md:px-10 lg:px-20">
+        <HeaderText
+          secondTitle="LET US KNOW HOW WE CAN HELP YOU"
+          headerPr="We don't just edit videos; we choreograph stories that resonate, inspire, and leave a lasting impression. Browse through our award-winning work and find concepts that move you"
+        />
+        <div class="tabs mt-[56px] md:mt-[50px] xl:mt-[64px]">
+          <div
+            class="flex justify-center gap-[40px] border-b-[1px] border-solid border-b-[#D0D5DD]"
+          >
+            <button
+              data-tab-control="business"
+              data-tab-current
+              class="font-['Noto_Sans'] font-[700] text-[16px] leading-[21.79px] text-[#FF601F] pb-[16px] border-b-[4px] border-solid border-b-[#FF601F]"
+              >Business</button
+            >
+            <button
+              data-tab-control="individual"
+              class="font-['Noto_Sans'] font-[400] text-[16px] leading-[21.79px] text-[#344054] pb-[16px]"
+              >Individual</button
+            >
+          </div>
+          <div data-tab-business>
+            <form
+              action=""
+              class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]"
+            >
+              <Input
+                type="text"
+                label="Company Name"
+                placeholder="Enter business name"
+              />
+
+              <Input
+                type="email"
+                label="Email Address"
+                placeholder="Enter email address"
+              />
+
+              <Input
+                type="text"
+                label="Subject(Optional)"
+                placeholder="Enter subject"
+              />
+
+              <TextArea
+                label="Tell us what we can do for you."
+                placeholder="Type your message"
+              />
+
+              <PrimaryButton type="submit">Send Message</PrimaryButton>
+            </form>
+          </div>
+
+          <div class="hidden" {...{ [`data-tab-${name}`]: "" }}>
+            <form
+              action=""
+              class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]"
+            >
+              <Input
+                type="text"
+                label="Full Name"
+                placeholder="Enter full name"
+              />
+
+              <Input
+                type="email"
+                label="Email Address"
+                placeholder="Enter email address"
+              />
+
+              <Input
+                type="text"
+                label="Subject(Optional)"
+                placeholder="Enter subject"
+              />
+
+              <TextArea
+                label="Tell us what you need."
+                placeholder="Type your message"
+              />
+
+              <PrimaryButton type="submit">Send Message</PrimaryButton>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-center gap-[40px] border-b-[1px] border-solid border-b-[#D0D5DD] mb-[20px]"
+      >
+      </div>
+    </div>
+    
+  </div>
+  <Vector display={"left-0 -bottom-[40%] sm:hidden"}/>
+</section>
+
+  <script>
+    const tabs = document.querySelectorAll(".tabs");
+
+    tabs.forEach((tab) => {
+      const currentClassList = tab
+        .querySelector("[data-tab-current]")
+        ?.classList?.toString();
+      const clickables = tab.querySelectorAll("[data-tab-control]");
+
+      clickables.forEach((clickable) => {
+        clickable.addEventListener("click", (event: any) => {
+          if (event.target.classList.toString() !== currentClassList) {
+            const inactiveClassList = event.target.classList;
+            const toHide = tab
+              .querySelector("[data-tab-current]")
+              ?.getAttribute("data-tab-control");
+            const toShow = event.target.getAttribute("data-tab-control");
+            const el = tab.querySelector(`[data-tab-${toHide}]`);
+
+            tab
+              .querySelector("[data-tab-current]")
+              ?.setAttribute("class", inactiveClassList.toString());
+            tab
+              .querySelector("[data-tab-current]")
+              ?.removeAttribute("data-tab-current");
+            event.target.setAttribute("class", currentClassList);
+            event.target.setAttribute("data-tab-current", "");
+
+            tab
+              .querySelector(`[data-tab-${toShow}]`)
+              ?.setAttribute("class", el?.classList?.toString() as string);
+            el?.setAttribute("class", "hidden");
+          }
+        });
+      });
+    });
+  </script>
+</LandingLayout>
