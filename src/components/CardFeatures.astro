@@ -3,17 +3,17 @@ interface Props {
     title: string;
   array: Array<string>;
   bg?: string;
-  opacity?: any;
+  opacity?: boolean;
   footer?: string;
 }
 
-const {title, array, bg = "#F2F4F7", opacity, footer } = Astro.props;
+const {title, array, bg = "#F2F4F7", opacity=false, footer } = Astro.props;
 ---
 
-<div class=" flex flex-col">
-  <div class={`bg-[${bg}] bg-opacity-${opacity} rounded-[16px] p-[32px]`}>
+<div class="md:w-full md:h-full flex flex-col">
+  <div class={`bg-[${bg}] md:h-full ${opacity && 'bg-opacity-10'}  rounded-[16px] p-[32px]`}>
     <div class="flex flex-col">
-      <h1 class="text-[24px] leading-[38.4px] text-[#101828]">
+      <h1 class="text-[24px] leading-[38.4px] text-[#101828] md:font-['Noto_Sans'] md:font-[700]">
         {title}
       </h1>
       <ul class="flex flex-col mt-[24px] gap-y-[8px]">
