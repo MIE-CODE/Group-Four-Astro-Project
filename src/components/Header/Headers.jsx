@@ -3,11 +3,11 @@ import { useState } from "react";
 const navLinks = [
   {
     name: "About Us",
-    link: "/contact",
+    link: "/get-in-touch",
   },
   {
     name: "Portfolio",
-    link: "/portfolio",
+    link: "/featured-works",
   },
   {
     name: "Clients",
@@ -15,7 +15,7 @@ const navLinks = [
     sub: [
       {
         name: "Individuals",
-        link: "/individual",
+        link: "/forIndividual",
       },
       {
         name: "Businesses",
@@ -25,7 +25,7 @@ const navLinks = [
   },
   {
     name: "Resources",
-    link: "/resources",
+    link: "/resource",
   },
 ];
 
@@ -49,7 +49,11 @@ export const Headers = () => {
             className="md:hidden cursor-pointer"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <img src="images/Hamburger_Icon.svg" alt="menu" className="w-8 h-8" />
+            <img
+              src="images/Hamburger_Icon.svg"
+              alt="menu"
+              className="w-8 h-8"
+            />
           </button>
         </div>
         <nav

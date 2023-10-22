@@ -1,26 +1,18 @@
 ---
-// import "@fontsource-variable/red-hat-display";
-// import LandingLayout from "../layouts/LandingLayout.astro";
-// import HeaderText from "../components/HeaderText/HeaderText.astro";
-// import NavItem from "../components/Header/NavItem.astro";
-// import Input from "../components/Input.astro";
-// import TextArea from "../components/TextArea.astro";
-// import PrimaryButton from "../components/PrimaryButton.astro";
-// import FaqCard from "../components/FaqCard.astro";
-// import VideoData from "../components/VideoData.astro";
-// import Dropdown from "../components/DropDown.astro";
-import "@fontsource-variable/red-hat-display";
-import LandingLayout from "../../layouts/LandingLayout.astro";
-import HeaderText from "../../components/HeaderText/HeaderText.astro";
-import NavItem from "../../components/Header/NavItem.astro";
-import Input from "../../components/Input.astro";
-import TextArea from "../../components/TextArea.astro";
-import PrimaryButton from "../../components/PrimaryButton.astro";
-import FaqCard from "../../components/FaqCard.astro";
-import VideoData from "../../components/VideoData.astro";
-import Dropdown from "../../components/DropDown.astro";
-
+import Header from '../../components/Header/Header.astro';
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import Main from '../../components/Main.astro'
+import PrimaryButton from '../../components/PrimaryButton.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import HeaderText from '../../components/HeaderText/HeaderText.astro';
+import CarefullyPicked from '../../components/CarefullyPicked';
+import Input from '../../components/Input.astro';
+import TextArea from '../../components/TextArea.astro';
+import Vector from '../../components/Vector';
 const name = "individual";
+
 ---
 
 <LandingLayout title="Featured Works">
@@ -34,8 +26,11 @@ const name = "individual";
     />
   </section>
   <div>
-    <VideoData />
+    <CarefullyPicked client:load />
+
   </div>
+<section>
+  <Vector display={"top-0 left-0"} />
   <div class=" flex justify-center">
     <div>
       <div class=" py-10 md:py-35 lg:pt-40 lg:pb-10 px-0 md:px-10 lg:px-20">
@@ -129,7 +124,10 @@ const name = "individual";
       >
       </div>
     </div>
+    
   </div>
+  <Vector display={"left-0 -bottom-[40%] sm:hidden"}/>
+</section>
 
   <script>
     const tabs = document.querySelectorAll(".tabs");

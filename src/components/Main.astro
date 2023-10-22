@@ -1,6 +1,10 @@
 ---
 import PrimaryButton from "./PrimaryButton.astro";
 import Arrow from "/public/Vector 1.svg"
+import FaqCard from "../components/FaqCard.astro"
+import Input from "./Input.astro";
+import TextArea from "./TextArea.astro";
+const name = "individual";
 ---
 
 
@@ -12,7 +16,7 @@ import Arrow from "/public/Vector 1.svg"
 <dev id="hero" class=" mx-auto h-[28rem]  grid  place-content-center text-center md:py-[15rem] border border-solid border-white-300">
     <h1 class="max-w-[52.5rem] font-bold text-3xl capitalize md:text-6xl lead">Crafting visual stories <span class="text-[#FF601F]"> beyond</span> imagination</h1>
     <p class="max-w-[32.5rem] mt-2 mx-auto text-base">Elevate your brand, Experience the power of storytelling through the lens of creativity and innocation</p>
-  <div class="flex justify-center py-2">
+  <div class="flex justify-center py-6">
 <button class="flex items-center bg-[#FF601F]  hover:bg-[#ff8b1f9c] text-white font-bold py-2 px-4 rounded">
   LET'S talk!
   <span class="ml-2">
@@ -54,7 +58,7 @@ import Arrow from "/public/Vector 1.svg"
 
 </dev>
 
-</section>
+</section> 
 
 <section class="mt-6 text-center">
   
@@ -109,16 +113,19 @@ import Arrow from "/public/Vector 1.svg"
             <h5 class="mt-3 font-bold text-lg text-gray-1000">Video Cleanup</h5>
             <p>Comprehensive video editing to enhance visual appeal</p>
         </div>
-          <div class="flex justify-center py-10">
-<button class="flex items-center    text-black font-bold py-2 px-4 rounded border border-solid border-white-300">
-EXPLORE ALL SERVICES  <span class="ml-2 ">
-   <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+   <div class="col-span-full mx-auto mb-6 ">
+  <button class="flex items-center text-black font-bold py-2 px-4 rounded border border-solid border-white-300">
+    EXPLORE ALL SERVICES
+    <span class="ml-2">
+      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
         <path d="M16.5 2L2.5 16" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
         <path d="M16.5 2V15.1765" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
         <path d="M16.5 2H3.32353" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
       </svg>
-  </span>
-</button>
+    </span>
+  </button>
+</div>
+
 
     </div>
 </section>
@@ -167,7 +174,18 @@ EXPLORE ALL SERVICES  <span class="ml-2 ">
             <img class="hidden w-full rounded-lg md:block" src='./images/portfolio-image2.png' alt=''>
         </div>
     </div>
-    <!-- <Button url="portfolio" text="View Recent Work" classNames="mx-auto border border-gray-600 rounded-lg bg-transparent text-gray-1000" iconPath="/dark-arrow.svg" /> -->
+      <div class="col-span-full mx-auto mb-6 py-4 ">
+  <button class="flex items-center text-black font-bold py-2 px-4 rounded border border-solid border-white-300">
+VIEW RECENT WORK
+    <span class="ml-2">
+      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+        <path d="M16.5 2L2.5 16" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+        <path d="M16.5 2V15.1765" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+        <path d="M16.5 2H3.32353" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+      </svg>
+    </span>
+  </button>
+</div>
 </section>
 
 
@@ -201,8 +219,17 @@ EXPLORE ALL SERVICES  <span class="ml-2 ">
 						<li><img src="/tick-circle.svg"/> And many more</li>
 					</ul>
 					<p>We&apos;re here to help you. Reach out to us as soon as possible!</p>
-
-                    <!-- <Button url="/business" text="See Businesses" classNames="mt-4 mx-0 border border-gray-600 bg-transparent text-gray-1000" iconPath="/dark-arrow.svg"/> -->
+ <div class="col-span-full  mb-6 py-4 ">
+  <button class="flex items-center text-black font-bold py-2 px-4 rounded border border-solid border-white-300">
+SEE BUSINESSES    <span class="ml-2">
+      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+        <path d="M16.5 2L2.5 16" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+        <path d="M16.5 2V15.1765" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+        <path d="M16.5 2H3.32353" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+      </svg>
+    </span>
+  </button>
+</div>
 				</div>
 
 				<div class="solution-card bg-[#fcece7]">
@@ -218,7 +245,18 @@ EXPLORE ALL SERVICES  <span class="ml-2 ">
 						<li><img src="/tick-circle.svg"/> Creative Artists</li>
 						<li><img src="/tick-circle.svg"/> And many more</li>
 					</ul>
-                    <!-- <Button url="/individuals" text="See Individuals" classNames="mt-4 mx-0 border border-gray-600 bg-transparent text-gray-1000" iconPath="/dark-arrow.svg" /> -->
+
+           <div class="col-span-full  mb-6 py-4 ">
+  <button class="flex items-center text-black font-bold py-2 px-4 rounded border border-solid border-white-300">
+SEE INDIVIDUALS    <span class="ml-2">
+      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+        <path d="M16.5 2L2.5 16" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+        <path d="M16.5 2V15.1765" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+        <path d="M16.5 2H3.32353" stroke="black" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+      </svg>
+    </span>
+  </button>
+</div>
 				</div>
 			</div>
         
@@ -274,19 +312,59 @@ EXPLORE ALL SERVICES  <span class="ml-2 ">
     <div class="tech-div py-[15rem] text-white grid gap-2 xl:py-[18.5rem]">
         <h5 class="font-bold md:text-5xl xl:text-7rem">The Tech Guy</h5>
         <p class="text-xl">A Day in the life of a Software Developer</p>
-        <!-- <Button url="/porfolio" text="View Project" iconPath="/lets-talk-arrow.svg" classNames="mx-auto mt-5 bg-[#FFFFFF2B] font-inter capitalize" /> -->
+
+           <div class="col-span-full mx-auto mb-6 py-4 ">
+  <button class="flex items-center text-white font-bold py-2 px-4 rounded border border-solid border-white-300">
+VIEW RECENT WORK
+   <span class="ml-2">
+  <svg class="text-white" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.5 2L2.5 16" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+    <path d="M16.5 2V15.1765" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+    <path d="M16.5 2H3.32353" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+  </svg>
+</span>
+
+  </button>
+</div>
     </div>
 
     <div class="mtn-div py-[15rem] text-white grid gap-2 xl:py-[18.5rem]">
         <h5 class="font-bold md:text-5xl xl:text-7rem">We Are the Pulse</h5>
         <p class="text-xl">An Ad made for MTN</p>
-        <!-- <Button url="/porfolio" text="View Project" iconPath="/lets-talk-arrow.svg" classNames="mx-auto mt-5 bg-[#FFFFFF2B] font-inter capitalize" /> -->
+
+
+                 <div class="col-span-full mx-auto mb-6 py-4 ">
+  <button class="flex items-center text-white font-bold py-2 px-4 rounded border border-solid border-white-300">
+VIEW RECENT WORK
+   <span class="ml-2">
+  <svg class="text-white" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.5 2L2.5 16" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+    <path d="M16.5 2V15.1765" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+    <path d="M16.5 2H3.32353" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+  </svg>
+</span>
+
+  </button>
+</div>
     </div>
 
     <div class="all-projects py-[15rem] text-white grid gap-2 xl:py-[18.5rem]">
         <h5 class="font-bold md:text-5xl xl:text-7rem relative z-1">All Projects</h5>
         <p class="text-xl relative z-1">We don’t like to brag, so let our work do the talking</p>
-        <!-- <Button url="/porfolio" text="View Project" iconPath="/lets-talk-arrow.svg" classNames="mx-auto mt-5 bg-[#FFFFFF2B] font-inter capitalize relative z-1" /> -->
+
+                 <div class="col-span-full mx-auto mb-6 py-4 ">
+  <button class="flex items-center text-white font-bold py-2 px-4 rounded border border-solid border-white-300">
+VIEW RECENT WORK
+   <span class="ml-2">
+  <svg class="text-white" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.5 2L2.5 16" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+    <path d="M16.5 2V15.1765" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+    <path d="M16.5 2H3.32353" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" />
+  </svg>
+</span>
+
+  </button>
+</div>
     </div>
 </section>
 
@@ -343,7 +421,7 @@ EXPLORE ALL SERVICES  <span class="ml-2 ">
             <span class="text-orange italic">"</span>
             <p class="mt-4">Genuine and special team members</p>
     
-            <div class="py-4 flex gap-2 justify-start items-center"]
+            <div class="py-4 flex gap-2 justify-start items-center">
                 <div class="w-12 h-12 bg-[#D9D9D9] rounded-full"></div>
                 <div class="grid ">
                     <span class="text-sm md:text-base">Barry Bones</span>
@@ -366,8 +444,63 @@ EXPLORE ALL SERVICES  <span class="ml-2 ">
         </div>
     </div>
 </section>
+<section class="">
+    <h3 class="create  bg-[#101828] px-4 py-[5rem] font-[800] text-5xl text-[#FFFFFF36] text-center uppercase leading-[1.5] md:text-6xl md:text-start md:py-[9rem] xl:text-7xl xl:py-[14rem]">
+        <p class="flex flex-col mx-auto md:max-w-[46rem] xl:max-w-[56rem]">
+            Like to be among
+            <span class="inline-block self-end">our happy clients?</span>
+        </p>  
+        
+    </h3>
+   
+ <div class="px-[16px] mt-[64px] md:mt-[106px] xl:mt-[98px] grid gap-[24px]">
+    <p class="uppercase font-['Red_Hat_Display'] font-[700] text-[32px] text-center leading-[42.34px] md:text-[48px] md:leading-[63.5px] xl:text-[72px] xl:leading-[95.26px]">GET IN TOUCH</p>
+  
+    <p class="font-['Noto_Sans'] font-[400] text-[16px] leading-[25.6px] text-center max-w-[643px] mx-auto xl:max-w-[862px]">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your <span class="font-[700]">brand</span> and visual storytelling.</p>
+  </div>
 
+  <div class="tabs mt-[56px] md:mt-[50px] xl:mt-[64px]">
+    <div class="flex justify-center gap-[40px] border-b-[1px] border-solid border-b-[#D0D5DD]">
+      <button data-tab-control="business" data-tab-current class="font-['Noto_Sans'] font-[700] text-[16px] leading-[21.79px] text-[#FF601F] pb-[16px] border-b-[4px] border-solid border-b-[#FF601F]">Business</button>
+      <button data-tab-control="individual" class="font-['Noto_Sans'] font-[400] text-[16px] leading-[21.79px] text-[#344054] pb-[16px]">Individual</button>
+    </div>
 
+    <div>
+      <div data-tab-business>
+        <form action="" class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]">
+          <Input type='text' label="Company Name" placeholder="Enter business name" />
+  
+          <Input type='email' label="Business Email Address" placeholder="Enter email address" />
+  
+          <Input type='email' label="Subject(Optional)" placeholder="Enter subject" />
+  
+          <TextArea label='Tell us what you need.' placeholder='Type your message' />
+  
+          <PrimaryButton type="submit">Send Message</PrimaryButton>
+        </form>
+      </div>
+
+      <div class="hidden" {...{[`data-tab-${name}`]:''}}>
+        <form action="" class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]">
+          <Input type='text' label="Full Name" placeholder="Enter full name" />
+
+          <Input type='email' label="Email Address" placeholder="Enter email address" />
+
+          <Input type='text' label="Subject(Optional)" placeholder="Enter subject" />
+
+          <TextArea label='Tell us what you need.' placeholder='Type your message' />
+
+          <PrimaryButton type="submit">Send Message</PrimaryButton>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+
+<FaqCard/>
+</section>
 <!-- .................................................................................... -->
 <style>
     #hero{
@@ -376,8 +509,8 @@ EXPLORE ALL SERVICES  <span class="ml-2 ">
     }
     @media screen and (min-width: 768px) {
         #hero{
-            background: url('/public/hero (copy).png') 50% 100% no-repeat;
-            background-size: cover;
+            background: url('/public/hero (copy).png') 50% 50% no-repeat;
+            background-size: cota;
         }
         }
 
@@ -939,6 +1072,11 @@ text-transform: uppercase;;
 
        section{
         background: url('/images/carousel-bg.png') 50% 50% no-repeat;
+        background-size: cover;
+    }
+    
+    .create{
+        background: url('/public/images/contact-bg.png') 50% 50% no-repeat;
         background-size: cover;
     }
 
