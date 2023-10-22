@@ -5,7 +5,6 @@ import FaqCard from "../components/FaqCard.astro"
 import Input from "./Input.astro";
 import TextArea from "./TextArea.astro";
 const name = "individual";
-
 ---
 
 
@@ -126,6 +125,7 @@ const name = "individual";
     </span>
   </button>
 </div>
+
 
     </div>
 </section>
@@ -495,36 +495,6 @@ VIEW RECENT WORK
       </div>
     </div>
   </div>
-
-
-
-  <script>
-  const tabs = document.querySelectorAll('.tabs');
-
-  tabs.forEach(tab => {
-    const currentClassList = tab.querySelector('[data-tab-current]')?.classList?.toString();
-    const clickables = tab.querySelectorAll('[data-tab-control]');
-
-    clickables.forEach((clickable) => {
-      clickable.addEventListener('click', (event:any) => {
-        if (event.target.classList.toString() !== currentClassList) {
-          const inactiveClassList = event.target.classList;
-          const toHide = tab.querySelector('[data-tab-current]')?.getAttribute('data-tab-control');
-          const toShow = event.target.getAttribute('data-tab-control');
-          const el = tab.querySelector(`[data-tab-${toHide}]`);
-
-          tab.querySelector('[data-tab-current]')?.setAttribute('class', inactiveClassList.toString());
-          tab.querySelector('[data-tab-current]')?.removeAttribute('data-tab-current');
-          event.target.setAttribute('class', currentClassList);
-          event.target.setAttribute('data-tab-current', '');
-
-          tab.querySelector(`[data-tab-${toShow}]`)?.setAttribute('class', el?.classList?.toString() as string);
-          el?.setAttribute('class', 'hidden');
-        }
-      })
-    });
-  });
-</script>
 </section>
 
 <section>
@@ -1104,14 +1074,11 @@ text-transform: uppercase;;
         background: url('/images/carousel-bg.png') 50% 50% no-repeat;
         background-size: cover;
     }
-<<<<<<< HEAD
     
     .create{
         background: url('/public/images/contact-bg.png') 50% 50% no-repeat;
         background-size: cover;
     }
-=======
->>>>>>> ac639b149a2a8edfbd113735588ce76824c900a6
 
 </style>
 
