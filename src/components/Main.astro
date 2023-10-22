@@ -1,6 +1,11 @@
 ---
 import PrimaryButton from "./PrimaryButton.astro";
 import Arrow from "/public/Vector 1.svg"
+import FaqCard from "../components/FaqCard.astro"
+import Input from "./Input.astro";
+import TextArea from "./TextArea.astro";
+const name = "individual";
+
 ---
 
 
@@ -54,7 +59,7 @@ import Arrow from "/public/Vector 1.svg"
 
 </dev>
 
-</section>
+</section> 
 
 <section class="mt-6 text-center">
   
@@ -448,20 +453,85 @@ VIEW RECENT WORK
         </p>  
         
     </h3>
-    <div class="mb-4 mx-auto p-6 py-12 text-center grid gap-5 md:pt-20 md:max-w-[46rem] xl:max-w-[55rem]">
-        <h2 class="font-bold text-3xl uppercase md:text-4xl xl:text-5xl">Let's <span class="text-orange">create</span> something
-            special together.</h2
-        >
-        <p
-            >In just 48 hours, our experts will meticulously assess
-            your video content and reveal untapped opportunities for
-            enhancing your brand and visual storytelling.</p
-        >
+   
+ <div class="px-[16px] mt-[64px] md:mt-[106px] xl:mt-[98px] grid gap-[24px]">
+    <p class="uppercase font-['Red_Hat_Display'] font-[700] text-[32px] text-center leading-[42.34px] md:text-[48px] md:leading-[63.5px] xl:text-[72px] xl:leading-[95.26px]">GET IN TOUCH</p>
+  
+    <p class="font-['Noto_Sans'] font-[400] text-[16px] leading-[25.6px] text-center max-w-[643px] mx-auto xl:max-w-[862px]">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your <span class="font-[700]">brand</span> and visual storytelling.</p>
+  </div>
+
+  <div class="tabs mt-[56px] md:mt-[50px] xl:mt-[64px]">
+    <div class="flex justify-center gap-[40px] border-b-[1px] border-solid border-b-[#D0D5DD]">
+      <button data-tab-control="business" data-tab-current class="font-['Noto_Sans'] font-[700] text-[16px] leading-[21.79px] text-[#FF601F] pb-[16px] border-b-[4px] border-solid border-b-[#FF601F]">Business</button>
+      <button data-tab-control="individual" class="font-['Noto_Sans'] font-[400] text-[16px] leading-[21.79px] text-[#344054] pb-[16px]">Individual</button>
     </div>
-    <!-- <FormContainer client:only="react" /> -->
+
+    <div>
+      <div data-tab-business>
+        <form action="" class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]">
+          <Input type='text' label="Company Name" placeholder="Enter business name" />
+  
+          <Input type='email' label="Business Email Address" placeholder="Enter email address" />
+  
+          <Input type='email' label="Subject(Optional)" placeholder="Enter subject" />
+  
+          <TextArea label='Tell us what you need.' placeholder='Type your message' />
+  
+          <PrimaryButton type="submit">Send Message</PrimaryButton>
+        </form>
+      </div>
+
+      <div class="hidden" {...{[`data-tab-${name}`]:''}}>
+        <form action="" class="pt-[24px] pb-[164px] md:pb-[73px] xl:pb-[96px] px-[16px] mx-auto md:max-w-[607px] md:pt-[48px] xl:pt-[56px] grid gap-[24px]">
+          <Input type='text' label="Full Name" placeholder="Enter full name" />
+
+          <Input type='email' label="Email Address" placeholder="Enter email address" />
+
+          <Input type='text' label="Subject(Optional)" placeholder="Enter subject" />
+
+          <TextArea label='Tell us what you need.' placeholder='Type your message' />
+
+          <PrimaryButton type="submit">Send Message</PrimaryButton>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+  const tabs = document.querySelectorAll('.tabs');
+
+  tabs.forEach(tab => {
+    const currentClassList = tab.querySelector('[data-tab-current]')?.classList?.toString();
+    const clickables = tab.querySelectorAll('[data-tab-control]');
+
+    clickables.forEach((clickable) => {
+      clickable.addEventListener('click', (event:any) => {
+        if (event.target.classList.toString() !== currentClassList) {
+          const inactiveClassList = event.target.classList;
+          const toHide = tab.querySelector('[data-tab-current]')?.getAttribute('data-tab-control');
+          const toShow = event.target.getAttribute('data-tab-control');
+          const el = tab.querySelector(`[data-tab-${toHide}]`);
+
+          tab.querySelector('[data-tab-current]')?.setAttribute('class', inactiveClassList.toString());
+          tab.querySelector('[data-tab-current]')?.removeAttribute('data-tab-current');
+          event.target.setAttribute('class', currentClassList);
+          event.target.setAttribute('data-tab-current', '');
+
+          tab.querySelector(`[data-tab-${toShow}]`)?.setAttribute('class', el?.classList?.toString() as string);
+          el?.setAttribute('class', 'hidden');
+        }
+      })
+    });
+  });
+</script>
 </section>
 
+<section>
 
+<FaqCard/>
+</section>
 <!-- .................................................................................... -->
 <style>
     #hero{
@@ -1035,12 +1105,11 @@ text-transform: uppercase;;
         background: url('/images/carousel-bg.png') 50% 50% no-repeat;
         background-size: cover;
     }
-    <style>
+    
     .create{
         background: url('/public/images/contact-bg.png') 50% 50% no-repeat;
         background-size: cover;
     }
-</style>
 
 </style>
 
