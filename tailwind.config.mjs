@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: "390px", // Small screens, e.g., phones
-        md: "835px", // Medium screens, e.g., tablets
-        lg: "1024px", // Large screens, e.g., laptops
-        xl: "1280px", // Extra-large screens, e.g., desktops
-        "2xl": "1536px", // Extra-extra-large screens, e.g., large desktops
+        // sm: "390px", // Small screens, e.g., phones
+        // md: "835px", // Medium screens, e.g., tablets
+        // lg: "1024px", // Large screens, e.g., laptops
+        // xl: "1280px", // Extra-large screens, e.g., desktops
+        // "2xl": "1536px", // Extra-extra-large screens, e.g., large desktops
       },
       fontFamily: {
         "red-hat": ["Red Hat Display", "sans"],
