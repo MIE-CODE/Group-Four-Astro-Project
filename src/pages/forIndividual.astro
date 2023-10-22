@@ -112,12 +112,12 @@ const caseStudy = [
         />
         </div>
         <div class="w-full flex flex-col items-center px-[25.46px] mt-[32px]">
-          <p class="text-[#344054] text-[16px] leading-[25.6x] text-center">
+          <p class="text-[#344054] md:mt-[42px] text-[16px] leading-[25.6x] text-center">
             With tifi.tv, your creative vision transforms into captivating
             visual stories.
           </p>
           <button
-            class="w-fit mt-[44px] mb-[64px] bg-[#FF601F] py-[12px] px-[20px] rounded-[8px] flex space-x-1"
+            class="w-fit mt-[44px] md:font-[inter] font-[800] mb-[64px] bg-[#FF601F] py-[12px] px-[20px] rounded-[8px] flex space-x-1"
           >
             <span class="text-[16px] leading-[24px] text-white">LET’S TALK</span
             >
@@ -139,20 +139,21 @@ const caseStudy = [
         </div>
       </section>
       <section class="w-full bg-[#FCFCFD]">
-        <div class="mt-[64px] px-[16px]">
+        <div class="md:flex md:flex-col md:items-center mt-[64px] px-[16px]">
           <div class="flex flex-col gap-y-[16px]">
             <h3 class="lg:hidden text-[#FF601F] text-[16px] leading-[25.6px] text-center">
               WHO WE HELP
             </h3>
-            <h3 class="lg:hidden text-[#FF601F] text-[16px] leading-[25.6px] text-center">
+            <h3 class="hidden md:block font-['Noto_Sans'] font-[700] md:text-[20px] text-[#FF601F] text-[16px] leading-[25.6px] text-center">
               WHAT WE CAN DO FOR YOU
             </h3>
             <h1
-              class="text-[32px] leading-[42.34px] text-center text-[#101828]"
+              class="text-[32px] md:mt-[24px] md:text-[64px] font-['Red_Hat_Display'] md:font-[600] leading-[42.34px] text-center text-[#101828]"
             >
               Custom Solutions for...
             </h1>
           </div>
+          <div class="md:flex md:mt-[56px] md:h-[400px] md:w-[1192px] md:justify-center md:gap-x-[32px]">
           <CardFeatures
             title="Personal Vlogs & Lifestyle"
             array={vlogs}
@@ -162,18 +163,19 @@ const caseStudy = [
             title="Content & Personal Branding"
             array={contentsList}
             bg="#FF601F"
-            opacity={10}
+            opacity={true}
           />
+          </div>
         </div>
       </section>
-      <section class="mt-[64px] bg-[#F2F4F7] flex flex-col px-[16px] pt-[64px] lg:pb-[96px]">
-        <div>
-          <h1 class="text-center text-[#101828] text-[32px] leading-[42.34px]">
+      <section class="mt-[64px] bg-[#F2F4F7] flex flex-col md:items-center px-[16px] md:px-[168px] pt-[64px] lg:pb-[96px]">
+        <div class="md:flex md:flex-col md:items-center lg:w-[]">
+          <h1 class="text-center lg:pt-[96px] lg:text-[64px] lg:leading-[84px] font-['Red_Hat_Display'] lg:font-[600] text-[#101828] text-[32px] leading-[42.34px]">
             Case
             <span class="text-[#FF601F]">Studies</span>
           </h1>
           <p
-            class="mt-[24px] text-[16px] leading-[25.6px] text-center text-[#344054]"
+            class="sm:w-[702px] mt-[24px] text-[16px] font-['Nato_Sans'] font-[400] lg:mx[245px] leading-[25.6px] text-center text-[#344054]"
           >
             Explore some of our standout projects, each representing a unique
             facet of our video editing and storytelling expertise. These
@@ -181,7 +183,7 @@ const caseStudy = [
             inspire and make an impact.
           </p>
         </div>
-        <div class="flex flex-col">
+        <div class="flex mt-[48px]  flex-col gap-y-[16px] md:gap-y-0  md:flex-row md:gap-x-[36px] md:px-[31px]  ">
           {
             caseStudy.map((cases) => (
               <CardCaseStudy
@@ -194,8 +196,8 @@ const caseStudy = [
       </section>
       <section class="bg-white flex flex-col lg:mt-">
         <div class="mx-[16px] sm:hidden">
-          <h1 class="flex text-[32px] leading-[42.34px] text-center">
-            Let's<span class="px-">Create</span><span class="-ml-4">something special together.</span>
+          <h1 class="flex text-[32px] font-['Red_Hat_Display'] font-[700] leading-[42.34px] text-center uppercase">
+            Let's Create something special together.</span>
 
           </h1>
           <p class="sm:hidden text-[16px] leading-[25.6px] text-center mt-[24px]">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your brand and visual storytelling.</p>
