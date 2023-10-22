@@ -15,7 +15,7 @@ const navLinks = [
     sub: [
       {
         name: "Individuals",
-        link: "/forIndividual",
+        link: "/individuals",
       },
       {
         name: "Businesses",
@@ -34,7 +34,7 @@ export const Headers = () => {
   return (
     <header
       // add blur to header
-      className="sm:px-4 bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm fixed right-0 left-0 top-0 z-50"
+      className="sm:px-4 bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm sticky right-0 left-0 top-0 z-50 "
     >
       <div className="  font-noto md:mt-8 flex justify-between items-center md:rounded-2xl border-b md:border  md:border-[##EAECF0] bg-white md:shadow-md max-w-[73rem] mx-auto py-4 px-5">
         <div className="flex justify-between items-center space-x-8 w-full md:w-auto">

@@ -3,7 +3,7 @@ import CardFeatures from "../../components/CardFeatures.astro";
 import CardwithImage from "../../components/CardwithImage.astro";
 import CardCaseStudy from "../../components/CardCaseStudy.astro";
 import Layout from "../../layouts/Layout.astro";
-import GetInTouchForm from "../../components/GetInTouchForm.astro"
+import GetInTouchForm from "../../components/GetInTouchForm.astro";
 import LandingLayout from "../../layouts/LandingLayout.astro";
 import Faq from "../../components/Faq";
 
@@ -39,18 +39,21 @@ const caseStudy = [
       "The video left a lasting impression, with heartfelt reactions from viewers and 50,000 shares across social media platforms.",
   },
 ];
-
 ---
 
 <LandingLayout title="For Individual">
   <main class="">
     <section class="w-full flex flex-col">
       <div
-        class="w-full sm:hidden bg-gradient-to-t from-[#EAECF0] to-[#EAECF0] rounded-[16px]"
+        class="w-full sm:hidden bg-gradient-to-t from-[#EAECF0] to-[#eaecf023] rounded-[16px]"
       >
-        <div class="flex flex-row">
-          <h1 class="text-[#101828] font-['Red_Hat_Display'] text-[32px] leading-[42.34px]">Featured</h1>
-          <h1 class="text-[#FF601F] text-[32px] leading-[42.32px]">Works</h1>
+        <div class="flex flex-row justify-center text-[24px] md:text-[32px] space-x-1 font-['Red_Hat_Display']">
+          <h1
+            class="text-[#101828]  leading-[42.34px]"
+          >
+            Featured
+          </h1>
+          <h1 class="text-[#FF601F]  leading-[42.32px]">Works</h1>
         </div>
         <p class="text-[16px] leading-[25.6px]">
           We don't just edit videos; we choreograph stories that resonate,
@@ -59,26 +62,46 @@ const caseStudy = [
         </p>
       </div>
       <div
-        class="hidden lg:flex lg:flex-col lg:mx-[161px] bg-gradient-to-t from-[#eaecf0a2] to-[#eaecf000] rounded-[16px] pb-[138px] lg:gap-y-[24px] px-[176px]"
+        class="hidden mt-[24px] md:mt-0 lg:flex lg:flex-col lg:mx-[161px] bg-gradient-to-t from-[#eaecf0a2] to-[#eaecf000] rounded-[16px] pb-[138px] lg:gap-y-[24px] px-[176px]"
       >
-        <div class="flex flex-row font-['Red_Hat_Display'] text-[72px] justify-center mt-[111px] space-x-2 font-[900] leading-[95.26px]">
-          <h1 class="text-[#101828]  leading-[42.34px]">For</h1>
+        <div
+          class="flex flex-row font-['Red_Hat_Display'] text-[72px] justify-center mt-[111px] space-x-2 font-[900] leading-[95.26px]"
+        >
+          <h1 class="text-[#101828] leading-[42.34px]">For</h1>
           <h1 class="text-[#FF601F] leading-[42.32px]">Individuals</h1>
         </div>
         <p class="text-[16px] leading-[25.6px] font-['Noto_Sans'] text-center">
-          In the realm of video creativity, every frame is a canvas, and we're here to help you paint your stories. Welcome to tifi.tv, where we cater to the unique needs of content creators, travelers, vloggers, and individuals with a passion for visual storytelling.
+          In the realm of video creativity, every frame is a canvas, and we're
+          here to help you paint your stories. Welcome to tifi.tv, where we
+          cater to the unique needs of content creators, travelers, vloggers,
+          and individuals with a passion for visual storytelling.
         </p>
       </div>
-      <section class="relative lg:flex flex-col lg:px-[160px] bg-[#F2F4F7] lg:mt-[96px] ">
+      <section
+        class="relative lg:flex flex-col lg:px-[160px] bg-[#F2F4F7] lg:mt-[96px]"
+      >
         <!-- <div class="lg:flex flex-col "> -->
-          <img src="/images/Vector.png" alt="" class="hidden lg:block lg:absolute top-0 left-0"/>
-          <div class="hidden lg:flex flex-col px-[130px] justify-center">
-            <h2 class="text-[64px] leading-[84.67px] text-[#1D2939] mt-[96px] text-center font-['Red_Hat_Display'] font-[400]">Unlock Your <span class="text-[#FF601F]"> Creative</span> Potential</h2>
-            <p class="w-full text-[16px] font-['Noto_Sans'] mt-[24px] font-[400] leading-[21.79px] text-center px-[80px]">Whether you're documenting your travels, sharing your daily adventures, or building your personal brand, we're here to help.</p>
-          </div>
+        <img
+          src="/images/Vector.png"
+          alt=""
+          class="hidden lg:block lg:absolute top-0 left-0"
+        />
+        <div class="hidden lg:flex flex-col px-[130px] justify-center">
+          <h2
+            class="text-[64px] flex flex-row space-x-2 leading-[84.67px] text-[#1D2939] mt-[96px] text-center font-['Red_Hat_Display'] font-[400]"
+          >
+            Unlock Your <span class="text-[#FF601F]"> Creative</span> Potential
+          </h2>
+          <p
+            class="w-full text-[16px] font-['Noto_Sans'] mt-[24px] font-[400] leading-[21.79px] text-center px-[80px]"
+          >
+            Whether you're documenting your travels, sharing your daily
+            adventures, or building your personal brand, we're here to help.
+          </p>
+        </div>
         <!-- </div> -->
         <div class="lg:hidden mx-[12px] mt-[56px] flex flex-col">
-          <div class="flex flex-row justify-center">
+          <div class="flex flex-row space-x-2 justify-center">
             <h1 class="text-[#FF601F] text-[32px] leading-[42.34px]">
               Crafting
             </h1>
@@ -92,27 +115,29 @@ const caseStudy = [
           </p>
         </div>
         <div class="flex lg:flex-row mt-[48px] flex-col">
-        <CardwithImage
-          title1="Professional"
-          title2="Quality"
-          image="/images/lady-on-pc.png"
-          description="You can achieve professional-level video content that rivals that of larger productions, ensuring a high-quality end product."
-        />
-        <CardwithImage
-          title1="Improved "
-          title2="Engagement"
-          image="/images/chart.png"
-          description="Professional videos tend to engage and captivate audiences more effectively, helping you connect with your viewers."
-        />
-        <CardwithImage
-          title1="Personal"
-          title2="Branding"
-          image="/images/bulb.png"
-          description="Benefit from your our support in creating videos that enhance personal brand, helping you stand out in the digital landscape."
-        />
+          <CardwithImage
+            title1="Professional"
+            title2="Quality"
+            image="/images/lady-on-pc.png"
+            description="You can achieve professional-level video content that rivals that of larger productions, ensuring a high-quality end product."
+          />
+          <CardwithImage
+            title1="Improved "
+            title2="Engagement"
+            image="/images/chart.png"
+            description="Professional videos tend to engage and captivate audiences more effectively, helping you connect with your viewers."
+          />
+          <CardwithImage
+            title1="Personal"
+            title2="Branding"
+            image="/images/bulb.png"
+            description="Benefit from your our support in creating videos that enhance personal brand, helping you stand out in the digital landscape."
+          />
         </div>
         <div class="w-full flex flex-col items-center px-[25.46px] mt-[32px]">
-          <p class="text-[#344054] md:mt-[42px] text-[16px] leading-[25.6x] text-center">
+          <p
+            class="text-[#344054] md:mt-[42px] text-[16px] leading-[25.6x] text-center"
+          >
             With tifi.tv, your creative vision transforms into captivating
             visual stories.
           </p>
@@ -141,10 +166,14 @@ const caseStudy = [
       <section class="w-full bg-[#FCFCFD]">
         <div class="md:flex md:flex-col md:items-center mt-[64px] px-[16px]">
           <div class="flex flex-col gap-y-[16px]">
-            <h3 class="lg:hidden text-[#FF601F] text-[16px] leading-[25.6px] text-center">
+            <h3
+              class="lg:hidden text-[#FF601F] text-[16px] leading-[25.6px] text-center"
+            >
               WHO WE HELP
             </h3>
-            <h3 class="hidden md:block font-['Noto_Sans'] font-[700] md:text-[20px] text-[#FF601F] text-[16px] leading-[25.6px] text-center">
+            <h3
+              class="hidden md:block font-['Noto_Sans'] font-[700] md:text-[20px] text-[#FF601F] text-[16px] leading-[25.6px] text-center"
+            >
               WHAT WE CAN DO FOR YOU
             </h3>
             <h1
@@ -153,24 +182,30 @@ const caseStudy = [
               Custom Solutions for...
             </h1>
           </div>
-          <div class="md:flex md:mt-[56px] md:h-[400px] md:w-[1192px] md:justify-center md:gap-x-[32px]">
-          <CardFeatures
-            title="Personal Vlogs & Lifestyle"
-            array={vlogs}
-            footer="We’re here to help you. Reach out to us as soon as possible!"
-          />
-          <CardFeatures
-            title="Content & Personal Branding"
-            array={contentsList}
-            bg="#FF601F"
-            opacity={true}
-          />
+          <div
+            class="md:flex md:mt-[56px] md:h-[400px] md:w-[1192px] md:justify-center md:gap-x-[32px]"
+          >
+            <CardFeatures
+              title="Personal Vlogs & Lifestyle"
+              array={vlogs}
+              footer="We’re here to help you. Reach out to us as soon as possible!"
+            />
+            <CardFeatures
+              title="Content & Personal Branding"
+              array={vlogs}
+              bg="#FF601F"
+              opacity={true}
+            />
           </div>
         </div>
       </section>
-      <section class="mt-[64px] bg-[#F2F4F7] flex flex-col md:items-center px-[16px] md:px-[168px] pt-[64px] lg:pb-[96px]">
+      <section
+        class="mt-[64px] bg-[#F2F4F7] flex flex-col md:items-center px-[16px] md:px-[168px] pt-[64px] lg:pb-[96px]"
+      >
         <div class="md:flex md:flex-col md:items-center lg:w-[]">
-          <h1 class="text-center lg:pt-[96px] lg:text-[64px] lg:leading-[84px] font-['Red_Hat_Display'] lg:font-[600] text-[#101828] text-[32px] leading-[42.34px]">
+          <h1
+            class="text-center lg:pt-[96px] lg:text-[64px] lg:leading-[84px] font-['Red_Hat_Display'] lg:font-[600] text-[#101828] text-[32px] leading-[42.34px]"
+          >
             Case
             <span class="text-[#FF601F]">Studies</span>
           </h1>
@@ -183,7 +218,9 @@ const caseStudy = [
             inspire and make an impact.
           </p>
         </div>
-        <div class="flex mt-[48px]  flex-col gap-y-[16px] md:gap-y-0  md:flex-row md:gap-x-[36px] md:px-[31px]  ">
+        <div
+          class="flex mt-[48px] flex-col gap-y-[16px] md:gap-y-0 md:flex-row md:gap-x-[36px] md:px-[31px]"
+        >
           {
             caseStudy.map((cases) => (
               <CardCaseStudy
@@ -196,18 +233,25 @@ const caseStudy = [
       </section>
       <section class="bg-white flex flex-col lg:mt-">
         <div class="mx-[16px] sm:hidden">
-          <h1 class="flex text-[32px] font-['Red_Hat_Display'] font-[700] leading-[42.34px] text-center uppercase">
-            Let's Create something special together.</span>
-
+          <h1
+            class="flex  md:text-[32px] font-['Red_Hat_Display'] font-[700] leading-[42.34px] text-center uppercase"
+          >
+            Let's Create something special together.
           </h1>
-          <p class="sm:hidden text-[16px] leading-[25.6px] text-center mt-[24px]">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your brand and visual storytelling.</p>
         </div>
-        <h2 class="hidden lg:block text-[62px] pt-[70px] leading-[95.26px] font-['Red_Hat_Display'] font-[700] px-[182px] text-center uppercase">
-          Let us know how we can help yOUR BUSINESS.
-        </h2>
-        <GetInTouchForm />
+        <p class="sm:hidden text-[16px] leading-[25.6px] text-center mt-[24px]">
+          In just 48 hours, our experts will meticulously assess your video
+          content and reveal untapped opportunities for enhancing your brand and
+          visual storytelling.
+        </p>
       </section>
-      <!-- <Faq client:load/> -->
+      <h2
+        class="hidden lg:block text-[62px] pt-[70px] leading-[95.26px] font-['Red_Hat_Display'] font-[700] px-[182px] text-center uppercase"
+      >
+        Let us know how we can help yOUR BUSINESS.
+      </h2>
+      <GetInTouchForm />
     </section>
+    <!-- <Faq client:load/> -->
   </main>
 </LandingLayout>
