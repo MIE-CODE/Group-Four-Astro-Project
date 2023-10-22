@@ -5,12 +5,16 @@ import Card from '../components/Card.astro';
 import Main from '../components/Main.astro'
 import PrimaryButton from '../components/PrimaryButton.astro';
 import Footer from '../components/Footer/Footer.astro';
+import LandingLayout from '../layouts/LandingLayout.astro';
+import HeaderText from '../components/HeaderText/HeaderText.astro';
+import CarefullyPicked from '../components/CarefullyPicked';
+import Input from '../components/Input.astro';
+import TextArea from '../components/TextArea.astro';
+import Vector from '../components/Vector';
+const name = "individual";
+
 ---
-<Layout title="Home">
-	<Header />
-	<Main />
-		
-<Footer/>
-</Layout>
 
-
+<LandingLayout title="Featured Works">
+ <Main/>
+</LandingLayout>

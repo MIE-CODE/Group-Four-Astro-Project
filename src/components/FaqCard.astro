@@ -1,0 +1,107 @@
+---
+const faqData1 = [
+  {
+    question: "What services does tifi.tv offer?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+
+  {
+    question: "How can I get started with your services?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+
+  {
+    question: "What is the typical process when working with tifi.tv?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+
+  {
+    question: "Do you have any case studies or success stories to share?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+
+];
+
+const faqData2 = [
+  {
+    question: "Do you provide custom solutions for unique projects?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+
+  {
+    question: "Can you provide pricing information for your services?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+
+  {
+    question: "Can I see examples of your previous work?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+
+  {
+    question: "What sets tifi.tv apart from other agencies?",
+    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
+  },
+];
+---
+
+<style>
+  .faq details summary::-webkit-details-marker {
+    display: none; /* For Webkit browsers like Chrome and Safari */
+  }
+  .faq details summary::before {
+    content: ""; /* For other browsers */
+  }
+</style>
+
+<h2 class="w-full lg:text-[64px] md:text-[48p] sm:text-[32px] text-center my-10">FAQ</h2>
+
+<section class="faq grid grid-cols-1 md:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-64 mb-24">
+    <div class="grid grid-cols-1 gap-3">
+        {faqData1.map(({ question, answer }, index) => (
+            <div class="p-4 bg-[#F2F4F7] rounded">
+            <details>
+                <summary class="font-semibold cursor-pointer relative flex items-center">
+                {question}
+                <span class="plus-icon absolute right-0 bg-gray-300 rounded p-1 px-3 text-black text-center align-items-center">+</span>
+                <span class="minus-icon absolute right-0 bg-[#df0000] rounded p-1 px-3 text-white text-center hidden">-</span>
+                </summary>
+                <p class="mt-2">{answer}</p>
+            </details>
+            </div>
+        ))}
+    </div>
+   <div class="grid grid-cols-1 gap-3">
+        {faqData2.map(({ question, answer }, index) => (
+        <div class="p-4 bg-[#F2F4F7] rounded">
+        <details>
+            <summary class="font-semibold cursor-pointer relative flex items-center">
+            {question}
+            <span class="plus-icon absolute right-0 bg-gray-300 rounded p-1 px-3 text-black text-center align-items-center">+</span>
+            <span class="minus-icon absolute right-0 bg-[#df0000] rounded p-1 px-3 text-white text-center hidden">-</span>
+            </summary>
+            <p class="mt-2">{answer}</p>
+        </details>
+        </div>
+    ))}
+    </div>
+    <>
+</section>
+
+<script>
+  document.querySelectorAll("details").forEach((details) => {
+    const summary = details.querySelector("summary");
+    const plusIcon = summary?.querySelector("span.plus-icon");
+    const minusIcon = summary?.querySelector("span.minus-icon");
+
+    details.addEventListener("toggle", () => {
+      if (details.open) {
+        plusIcon?.classList.add("hidden");
+        minusIcon?.classList.remove("hidden");
+      } else {
+        plusIcon?.classList.remove("hidden");
+        minusIcon?.classList.add("hidden");
+      }
+    });
+  });
+</script>

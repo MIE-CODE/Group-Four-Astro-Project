@@ -1,0 +1,7 @@
+---
+const {url, text, classNames, iconPath} = Astro.props;
+---
+<a href={url} class={`flex gap-3 w-fit p-3 px-5 bg-orange rounded-lg font-bold uppercase ${classNames}`}>
+    {text}
+    <img src={iconPath} alt="icon">
+</a>
