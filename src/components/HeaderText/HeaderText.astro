@@ -4,10 +4,10 @@ const { headerPr } = Astro.props;
 const { secondTitle } = Astro.props;
 ---
 
-    <div class="container mx-auto px-4">
-        <div class="showcase-text text-center">
-      <h1 class="text-4xl font-bold mb-4">{headerTitle} <span>{secondTitle}</span></h1>
-      <p class="text-lg">{headerPr}</p>
+    <div class="container mx-auto flex justify-center">
+        <div class="showcase-text text-center w-[80%]">
+      <h1 class="lg:text-7xl md:text-[55px] sm:text-[32px] font-bold mb-8 text-[#FF601F] font-['Red_Hat_Display']">{headerTitle} <span class="text-[#101828]">{secondTitle}</span></h1>
+      <p class="text-lg font-['Noto_Sans'] ">{headerPr}</p>
     </div>
   </div>
 
