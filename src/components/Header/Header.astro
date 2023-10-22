@@ -1,27 +1,76 @@
 ---
-import NavItem from "./NavItem.astro";
 import PrimaryButton from "../PrimaryButton.astro";
+const navLinks = [
+    {
+        name: "About Us",
+        link: "#",
+    },
+    {
+        name: "Portfolio",
+        link: "#",
+    },
+    {
+        name: "Clients",
+        link: "#",
+        sub: [
+            {
+                name: "Client1",
+                link: "#",
+            },
+        ],
+    },
+    {
+        name: "Resources",
+        link: "#",
+    },
+];
 ---
 
-<header class="w-[100%] py-[28px] px-[40px] shadow-[0px_2px_4px_0px_#1018280F] flex justify-between max-w-[1188px] xl:py-[24px] xl:pl-[24px] xl:pr-[32.5px] ml-auto mr-auto mt-[32px] rounded xl:rounded-[24px]">
-  <a href="/">
-    <img src="/images/Tifi.svg" />
-  </a>
+<header>
+    <div
+        class="mt-8 flex justify-between items-center rounded-2xl w-full border border-[##EAECF0] bg-white shadow-md max-w-6xl mx-auto py-4 px-5"
+    >
+        <div>
+            <img src="/images/Tifi.svg" alt="Tifi Logo" class="w-[44px] h-[20px]" />
+        </div>
+        <nav>
+            <ul class="flex items-center space-x-8">
+                {
+                    navLinks.map((link) => (
+                        <li class={`${link.sub && "group"} relative`}>
+                            <a
+                                href={link.link}
+                                class="text-[#2B2B2B] hover:text-[#FF601F] transition-all duration-300 ease-in-out"
+                            >
+                                {link.name}
+                            </a>
+                            {link.sub && (
+                                <ul
+                                    class="absolute top-10 left-0 bg-white shadow-md rounded-2xl py-4 px-5
+                                    hidden group-hover:block hover:block transition-all duration-300 ease-in-out"
+                                >
+                                    {link.sub.map((subLink, index) => (
+                                        <li>
+                                            <a
+                                                href={subLink.link}
+                                                class="text-[#2B2B2B] hover:text-[#FF601F] transition-all duration-300 ease-in-out"
+                                            >
+                                                {subLink.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
 
-  <nav class="hidden xl:flex gap-[32px]">
-    <NavItem  href="#about">About Us</NavItem>
-    <NavItem href="#portfolio">Portfolio</NavItem>
-    <NavItem href="#clients" hasDrop>Clients</NavItem>
-    <NavItem href="#resources">Resources</NavItem>
-  </nav>
-
-  <button class="p-[8px] xl:hidden">
-    <img  src="/images/Hamburger_Icon.svg" />
-  </button>
-
-  <div class="hidden xl:block">
-    <PrimaryButton href="#lets-talk" component="a">
-      Let's talk
-    </PrimaryButton>
-  </div>
+        <div>
+            <PrimaryButton href="#lets-talk"  component="a">
+                Let's talk
+              </PrimaryButton>
+        </div>
+    </div>
 </header>
